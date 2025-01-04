@@ -12,7 +12,7 @@ routes.post("/usuarios/login", usuarioController.postLogin);
 routes.get("/usuarios/cadastrar/:email?", usuarioController.getCadastrar);
 routes.get("/usuarios/:id?", auth, usuarioController.getListar);
 
-routes.post("/usuarios", auth, usuarioController.postAdicionar);
+routes.post("/usuarios", usuarioController.postAdicionar);
 
 routes.get("/usuarios/remover/:email", auth, usuarioController.getRemover);
 
