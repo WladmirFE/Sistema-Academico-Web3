@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <%- include("../partials/cabecalho") %>
+    <%- include("../partials/menuBar") %>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Aluno</title>
+
+    <div class="container rounded mt-5 mb-5" style="background-color: rgb(184, 184, 184); height: 20pc">
+        <div class="row">
+            
+            <form action="/alunos" method="post">
+
+                <input type="hidden" name="_id" value="<%= aluno._id %>">
+
+                <div>
+                    <label class="form-label">Matricula:</label>
+                    <input value="<%= aluno.matricula %>" class="form-control" type="text" name="matricula" required>
+                </div>
+
+                <div>
+                    <label class="form-label">Nome: </label>
+                    <input value="<%= aluno.nome %>" class="form-control" type="text" name="nome" required>
+                </div>
+                
+                <div>
+                    <label class="form-label">Curso: </label>
+                    <input value="<%= aluno.curso %>" class="form-control" type="text" name="curso" required>
+                </div>
+                
+                <div>
+                    <label class="form-label">Foto: </label>
+                    <input value="<%= aluno.foto %>" class="form-control" type="text" name="foto">
+                </div>
+
+                <div>
+                    <a href="/" class="btn btn-danger">Voltar</a>
+                    <button class="btn btn-success" type="submit">Salvar</button>
+                </div>
+
+            </form>
+            
+      </div>
+    </div> 
+
+</head>
+<body>
+    
+</body>
+
+    <%- include("../partials/rodape") %>
+</html>

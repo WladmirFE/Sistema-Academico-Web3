@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <%- include("../partials/cabecalho") %>
+    <%- include("../partials/menuBar") %>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disciplinas</title>
+</head>
+<body>
+
+    <div class="container rounded mt-5 mb-5" style="height: 20pc">
+        <div class="row">
+
+            <div class="col-sm-12">
+                
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Detalhar</th>
+                        <th scope="col">Editar</th>
+                        <th scope="col">Excluir</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+            
+                        <% disciplinas.forEach(function(disciplina) { %>
+                            <tr>
+                                <th scope="row"><%= disciplina.id%></th>
+                                <td><%= disciplina.nome %></td>
+                                <td>
+                                    <a href="/disciplinas/<%= disciplina.id %>" type="button" class="btn btn-primary">
+                                        Detalhar Disciplina
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="/disciplinas/cadastrar/<%= disciplina.id %>" type="button" class="btn btn-warning">
+                                        Editar Disciplina
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="/disciplinas/remover/<%= disciplina.id %>" type="button" class="btn btn-danger">
+                                        Remover Disciplina
+                                    </a>
+                                </td>
+                            </tr>
+                        <% }); %>
+            
+            
+                    </tbody>
+                </table>
+
+            </div>
+      </div>
+    </div> 
+
+    
+
+</body>
+
+    <%- include("../partials/rodape") %>
+</html>

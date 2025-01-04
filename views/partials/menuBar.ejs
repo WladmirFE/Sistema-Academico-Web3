@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/"><h2>Pagina Inicial</h2></a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Alunos</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/alunos">Listar</a></li>
+                        <li><a class="dropdown-item" href="/alunos/cadastrar">Cadastrar</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Disciplinas</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/disciplinas">Listar</a></li>
+                        <li><a class="dropdown-item" href="/disciplinas/cadastrar">Cadastrar</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Usuarios</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/usuarios/login">Login</a></li>
+                        <li><a class="dropdown-item" href="/usuarios">Listar</a></li>
+                        <li><a class="dropdown-item" href="/usuarios/cadastrar">Cadastrar</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <a class="btn btn-outline-danger" href="/usuarios/logout" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%);">Deslogar</a>
+    </div>
+</nav>

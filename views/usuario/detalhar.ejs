@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <%- include("../partials/cabecalho") %>
+    <%- include("../partials/menuBar") %>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhar Usuario</title>
+
+    <div class="container rounded mt-5 mb-5" style="background-color: rgb(184, 184, 184); height: 20pc">
+        <div class="row">
+
+            <div class="col-sm-4 py-5">
+                <div>
+                    <h1><%=usuario.nome%></h1>
+                </div>
+                <div>
+                    <h5>email: <%=usuario.email%></h5>
+                </div>
+            </div>
+      </div>
+    </div> 
+
+</head>
+<body>
+    
+</body>
+
+    <%- include("../partials/rodape") %>
+</html>

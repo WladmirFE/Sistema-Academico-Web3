@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <%- include("../partials/cabecalho") %>
+    <%- include("../partials/menuBar") %>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Usuario</title>
+
+    <div class="container rounded mt-5 mb-5" style="background-color: rgb(184, 184, 184); height: 20pc">
+        <div class="row">
+            
+            <form action="/usuarios" method="post">
+
+
+                <% if (status=="1") { %>
+                    <div style="color:white; background:rgb(255, 0, 0)">Esse email ja esta cadastrado.</div>
+                <% } %>
+
+                <input type="hidden" name="_id" value="<%= usuario._id %>">
+
+                <div>
+                    <label class="form-label">Nome:</label>
+                    <input value="<%= usuario.nome %>" class="form-control" type="text" name="nome" required>
+                </div>
+
+                <div>
+                    <label class="form-label">Email:</label>
+                    <input value="<%= usuario.email %>" class="form-control" type="email" name="email" required>
+                </div>
+
+                <div>
+                    <label class="form-label">Senha:</label>
+                    <input value="<%= usuario.senha %>" class="form-control" type="password" name="senha" required>
+                </div>
+
+                <div>
+                    <a href="/" class="btn btn-danger">Voltar</a>
+                    <button class="btn btn-success" type="submit">Salvar</button>
+                </div>
+
+            </form>
+            
+      </div>
+    </div> 
+
+</head>
+<body>
+    
+</body>
+
+    <%- include("../partials/rodape") %>
+</html>

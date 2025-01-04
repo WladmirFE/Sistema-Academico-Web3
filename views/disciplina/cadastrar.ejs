@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <%- include("../partials/cabecalho") %>
+    <%- include("../partials/menuBar") %>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Disciplina</title>
+
+    <div class="container rounded mt-5 mb-5" style="background-color: rgb(184, 184, 184); height: 20pc">
+        <div class="row">
+            
+            <form action="/disciplinas" method="post">
+
+                <input type="hidden" name="_id" value="<%= disciplina._id %>">
+
+                <div>
+                    <label class="form-label">ID:</label>
+                    <input value="<%= disciplina.id %>" class="form-control" type="text" name="id" required>
+                </div>
+
+                <div>
+                    <label class="form-label">Nome:</label>
+                    <input value="<%= disciplina.nome %>" class="form-control" type="text" name="nome" required>
+                </div>
+
+                <div>
+                    <label class="form-label">Carga Horaria:</label>
+                    <input value="<%= disciplina.cargaHoraria %>" class="form-control" type="text" name="cargaHoraria" required>
+                </div>
+
+                <div>
+                    <label class="form-label">Professor:</label>
+                    <input value="<%= disciplina.professor %>" class="form-control" type="text" name="professor" required>
+                </div>
+
+                    
+                <div>
+                    <a href="/" class="btn btn-danger">Voltar</a>
+                    <button class="btn btn-success" type="submit">Salvar</button>
+                </div>
+
+            </form>
+            
+      </div>
+    </div> 
+
+</head>
+<body>
+    
+</body>
+
+    <%- include("../partials/rodape") %>
+</html>
